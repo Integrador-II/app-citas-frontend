@@ -1,0 +1,220 @@
+<!doctype html>
+                        <html>
+                            <head>
+                                <meta charset='utf-8'>
+                                <meta name='viewport' content='width=device-width, initial-scale=1'>
+                                <title>Sistemas de Registro de Citas</title>
+                                <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' rel='stylesheet'>
+                                <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css' rel='stylesheet'>
+                                <link href='estilo.css' rel='stylesheet'>
+                                
+                                <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+                                <script type='text/javascript' src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+                                <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+                                <style></style>
+                                </head>
+                                <body oncontextmenu='return false' class='snippet-body'>
+                                <div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-11 col-sm-9 col-md-7 col-lg-6 col-xl-5 text-center p-0 mt-3 mb-2">
+            <div class="card px-0 pt-4 pb-0 mt-3 mb-3">
+                <h1 id="heading">CL&Iacute;NICA UTP</h1>
+                <p>Reserva tu cita online</p>
+                <form id="msform" autocomplete="off">
+                    <!-- progressbar -->
+                    <ul id="progressbar">
+                        <li class="active" id="personal"><strong>Datos Personales</strong></li>
+                        <li id="especialidad"><strong>Especialidad</strong></li>
+                        <li id="doctor"><strong>M&eacute;dico</strong></li>
+                        <li id="confirm"><strong>Final</strong></li>
+                    </ul>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div> <br> <!-- fieldsets -->
+                    <fieldset>
+                        <div class="form-card step1">
+                            <div class="row">
+                                <div class="col-7">
+                                    <h2 class="fs-title">Datos personales:</h2>
+                                </div>
+                                <div class="col-5">
+                                    <h2 class="steps">Paso 1 de 4</h2>
+                                </div>
+                            </div>
+
+                            <label class="fieldlabels" style="display: block !important;">Ingrese sus datos personales:</label>
+                            <div class="row">
+                                <div class="col">
+                                    <label class="fieldlabels">Tipo Documento: *</label> 
+                                    <select id="tipo_documento">
+                                        <option value="01">DNI</option>
+                                        <option value="02">Carn&eacute; de Extranjer&iacute;a</option>
+                                    </select>
+                                </div>
+                                <div class="col">
+                                    <label class="fieldlabels">N&uacute;mero de documento: *</label> 
+                                    <input type="number" id="numero_documento" placeholder="N&uacute;mero de documento" autocomplete="off"/> 
+                                </div>
+                            </div>
+                            
+                              
+
+
+                            <div class="row">
+                                <div class="col">
+                                    <label class="fieldlabels">Apellido Paterno: *</label> 
+                                    <input type="text" id="apellido_paterno" placeholder="Apellido Paterno" autocomplete="off"/> 
+                                </div>
+                                <div class="col">
+                                    <label class="fieldlabels">Apellido Materno: *</label> 
+                                    <input type="text" id="apellido_materno" placeholder="Apellido Materno" autocomplete="off"/> 
+                                </div>
+                            </div>
+                            
+
+                            
+                            <div class="row">
+                                <div class="col">
+                                    <label class="fieldlabels">Nombres: *</label> 
+                                    <input type="text" id="nombres" placeholder="Nombres" autocomplete="off"/> 
+                                </div>
+                            </div>
+
+
+
+                            <div class="row">
+                                <div class="col">
+                                    <label class="fieldlabels">Celular: *</label> 
+                                    <input type="number" id="celular" placeholder="Número Celular" autocomplete="off"/> 
+                                </div>
+                                <div class="col">
+                                    <label class="fieldlabels">Correo: *</label> 
+                                    <input type="email" id="correo" placeholder="Correo" autocomplete="off"/>
+                                </div>
+                            </div>
+                            
+                            
+
+
+
+                        </div> 
+                        <input type="button" name="next" id="next_especialidad" class="next action-button" value="Siguiente" />
+                    </fieldset>
+                    <fieldset>
+                        <div class="form-card step2">
+                            <div class="row">
+                                <div class="col-7">
+                                    <h2 class="fs-title">Especialidad:</h2>
+                                </div>
+                                <div class="col-5">
+                                    <h2 class="steps">Paso 2 de 4</h2>
+                                </div>
+                            </div> 
+                            
+                            <label class="fieldlabels">Seleccione una especialidad</label> 
+
+                            
+                            <div class="div_items">
+                                <ol class="selectable" id="select_especialidad">
+                                    <!--
+                                    <li class="ui-widget-content">CIRUGIA ONCOLOGICA</li>
+                                    <li class="ui-widget-content">Item 2</li>
+                                    <li class="ui-widget-content">Item 3</li>
+                                    <li class="ui-widget-content">Item 4</li>
+                                    <li class="ui-widget-content">Item 5</li>
+                                    <li class="ui-widget-content">Item 6</li>
+                                    <li class="ui-widget-content">Item 7</li>
+                                    -->
+                                </ol>
+                            </div>
+                        </div> 
+                        <input type="button" id="next_medico" name="next" class="next action-button" value="Siguiente" /> 
+                        <input type="button" name="previous" class="previous action-button-previous" value="Anterior" />
+                    </fieldset>
+                    <fieldset>
+                        <div class="form-card">
+                            <div class="row">
+                                <div class="col-7">
+                                    <h2 class="fs-title">Médico y Horario:</h2>
+                                </div>
+                                <div class="col-5">
+                                    <h2 class="steps">Paso 3 de 4</h2>
+                                </div>
+                            </div> 
+                            
+                            <label class="fieldlabels"><strong>Seleccione un M&eacute;dico:</strong></label>
+
+                            <div class="div_items">
+                                <ol class="selectable" id="select_medico">
+                                    <!--
+                                    <li class="ui-widget-content"><strong>Dr. Luis Dioses</strong> <br /><span>Pr&oacute;xima cita: 01/07/2021 19:40:00</span></li>
+                                    <li class="ui-widget-content">Item 2</li>
+                                    <li class="ui-widget-content">Item 3</li>
+                                    <li class="ui-widget-content">Item 4</li>
+                                    <li class="ui-widget-content">Item 5</li>
+                                    <li class="ui-widget-content">Item 6</li>
+                                    <li class="ui-widget-content">Item 7</li>
+                                    -->
+                                </ol>
+                            </div>
+
+                            <label class="fieldlabels"><strong>Seleccione una fecha y hora :</strong></label>
+
+                            <div id="div_fecha_hora" class="row hidden">
+                                <div class="col-12 col-sm-12 col-md-7 col-xl-6">
+                                    <div id="datepicker_cita"></div>
+                                    <span id="fecha_select"></span>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-5 col-xl-6">
+                                    <div align="left" style="margin-left:4px">
+                                    <ul id="select_hora" class="ul_horas">
+                                        <!--
+                                        <li>08:00</li>
+                                        <li>08:20</li>
+                                        <li>08:40</li>
+                                        <li>09:00</li>
+                                        <li>09:20</li>
+                                        <li>09:40</li>
+                                        -->
+                                    </ul>             
+                                </div>                       
+                                </div>
+                            </div> 
+
+
+                        </div> 
+                            <input type="button" id="next_reservar" name="next" class="next action-button" value="Reservar" />
+                            <input type="button" name="previous" class="previous action-button-previous" value="Anterior" />
+                    </fieldset>
+                    <fieldset>
+                        <div class="form-card">
+                            <div class="row">
+                                <div class="col-7">
+                                    <h2 class="fs-title">Resumen Cita:</h2>
+                                </div>
+                                <div class="col-5">
+                                    <h2 class="steps">Paso 4 de 4</h2>
+                                </div>
+                            </div> <br><br>
+                            <h2 class="purple-text text-center"><strong>CITA RESERVADA !</strong></h2> <br>
+                            <div class="row justify-content-center">
+                                <div class="col-3"> <img src="images/success.png" class="fit-image"> </div>
+                            </div> <br><br>
+                            <div class="row justify-content-center">
+                                <div class="col-12 text-center">
+                                    <h5 class="purple-text text-center">Tu cita se reservó con el c&oacute;digo <strong><span id="numero_cita">001</span></strong></h5>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+                                <script type='text/javascript' src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js'></script>
+                                <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/i18n/ui.datepicker-es.js"></script>
+                                <script type='text/javascript' src='cita.js'></script>
+                                <script type='text/javascript' src='app.js'></script>
+                                </body>
+                            </html>
