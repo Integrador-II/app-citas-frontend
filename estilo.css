@@ -58,6 +58,10 @@ p {
     letter-spacing: 1px
 }
 
+#msform input[type="radio"] {
+    width: auto;
+}
+
 #msform input:focus,
 #msform select:focus,
 #msform textarea:focus {
@@ -336,4 +340,8 @@ p {
 
 #fecha_select{
     display: none;
+}
+
+label.cursor{
+    cursor: pointer;
 }

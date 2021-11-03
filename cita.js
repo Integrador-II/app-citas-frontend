@@ -5,6 +5,7 @@ var AppCitas = {
         console.log("inicio de la aplicación");
         this.cargarEspecialidades();
         this.eventos();
+        //this.fnDatosEjemplo();
     },
     eventos: function(){
         $('input[id=numero_documento]').change(function() {
@@ -163,14 +164,15 @@ var AppCitas = {
             correo: $('#correo').val()
         }
 
+        console.log("tipo_atencion=>"+ $('input[name="tipo_atencion"]:checked').val());
         var cita = {
             fechaReserva: fechaReserva,
             horaReserva: horaReserva,
-            idTipoAtencion: 1,
+            idTipoAtencion: $('input[name="tipo_atencion"]:checked').val(),
             idMedico: idMedico,
             paciente: paciente
         }
-
+        
         $.ajax({ 
             type: 'POST', 
             url: URL_BACKEND+"/citas/generarCita",
@@ -183,6 +185,7 @@ var AppCitas = {
                 }
             }
         });
+        
     },
 
     fnSetearFechas: function(cupos){
@@ -318,6 +321,13 @@ var AppCitas = {
         }
 
         return true;
+    },
+    fnDatosEjemplo: function(){
+        $('#numero_documento').val('43459267');
+        $('#apellido_paterno').val('Quispe');
+        $('#apellido_materno').val('Ramos');
+        $('#nombres').val('Edwin');
+        $('#celular').val('973868825');
     }
 };
 

@@ -18,7 +18,7 @@
     <div class="row justify-content-center">
         <div class="col-11 col-sm-9 col-md-7 col-lg-6 col-xl-5 text-center p-0 mt-3 mb-2">
             <div class="card px-0 pt-4 pb-0 mt-3 mb-3">
-                <h1 id="heading">CL&Iacute;NICA UTP</h1>
+                <h1 id="heading">CL&Iacute;NICA MODERN</h1>
                 <p>Reserva tu cita online</p>
                 <form id="msform" autocomplete="off">
                     <!-- progressbar -->
@@ -181,6 +181,13 @@
                                 </div>
                             </div> 
 
+                            <label class="fieldlabels"><strong>Seleccione Tipo Atenci&oacute;n</strong></label>
+                            <div class="row">
+                                <div class="col"><label class="cursor"><input type="radio" name="tipo_atencion" value="1" checked> Presencial </label></div>
+                                <div class="col"><label class="cursor"><input type="radio" name="tipo_atencion" value="2"> En línea</label></div>
+                            </div>
+
+
 
                         </div> 
                             <input type="button" id="next_reservar" name="next" class="next action-button" value="Reservar" />
@@ -202,7 +209,8 @@
                             </div> <br><br>
                             <div class="row justify-content-center">
                                 <div class="col-12 text-center">
-                                    <h5 class="purple-text text-center">Tu cita se reservó con el c&oacute;digo <strong><span id="numero_cita">001</span></strong></h5>
+                                    <h5 class="purple-text text-center">Tu cita se reservó con el c&oacute;digo <strong><span id="numero_cita">###</span></strong></h5>
+                                    <span class=""><strong>Importante:</strong> Si su cita fue en línea, se le confirmará por correo y/o número celular.</span>
                                 </div>
                             </div>
                         </div>
